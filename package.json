@@ -1,0 +1,14 @@
+{
+  "name": "themer",
+  "version": "1.0.0",
+  "description": "A theme creator for light and dark mode mobile UI.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server --port=5500"
+  },
+  "author": "Mohamad Ojail",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

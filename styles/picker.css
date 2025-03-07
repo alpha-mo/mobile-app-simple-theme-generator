@@ -1,0 +1,41 @@
+/* picker.css */
+
+.popup-container {
+    position: relative;
+    background: transparent;
+}
+
+.popup {
+    border: 1px solid lightgray;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 2px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+    flex-direction: column;
+}
+
+.picker-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.closePicker {
+    border: none;
+    position: absolute;
+    content: '';
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    z-index: 25;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}

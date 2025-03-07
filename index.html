@@ -1,0 +1,332 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Creator</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/picker.css" type="text/css">
+    <link rel="stylesheet" href="styles/ui.css" type="text/css">
+    <!-- <link rel="stylesheet" href="styles/light-ui.css" type="text/css">
+    <link rel="stylesheet" href="styles/dark-ui.css" type="text/css"> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    <link rel="icon" href="picker-icon.png" type="image/x-icon">
+</head>
+
+<body>
+    <h1 style="margin: 20px;">Simple Color Pallete Creator</h1>
+    <dic class="content">
+        <div class="controls">
+            <h3>Light mode colors</h3>
+
+            <!-- Primary color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-background">
+                    BACKGROUND
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-background" class="popup">
+                    <div id="light-background-picker">
+                        <button id="light-closePickerBtn-background" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-surface">
+                    SURFACE
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-surface" class="popup">
+                    <div id="light-surface-picker">
+                        <button id="light-closePickerBtn-surface" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Card Content color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-textPrimary">
+                    TEXT_PRIMARY
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-textPrimary" class="popup">
+                    <div id="light-textPrimary-picker">
+                        <button id="light-closePickerBtn-textPrimary" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Text Input Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-textSecondary">
+                    TEXT_SECONDARY
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-textSecondary" class="popup">
+                    <div id="light-textSecondary-picker">
+                        <button id="light-closePickerBtn-textSecondary" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Text Input Text color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-textInvert">
+                    TEXT_INVERT
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-textInvert" class="popup">
+                    <div id="light-textInvert-picker">
+                        <button id="light-closePickerBtn-textInvert" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Text color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-borderLight">
+                    BORDER_LIGHT
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-borderLight" class="popup">
+                    <div id="light-borderLight-picker">
+                        <button id="light-closePickerBtn-borderLight" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Dimmed color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-borderDark">
+                    BORDER_DARK
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-borderDark" class="popup">
+                    <div id="light-borderDark-picker">
+                        <button id="light-closePickerBtn-borderDark" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Btn Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-accent">
+                    ACCENT
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-accent" class="popup">
+                    <div id="light-accent-picker">
+                        <button id="light-closePickerBtn-accent" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Btn txt color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-error">
+                    ERROR
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-error" class="popup">
+                    <div id="light-error-picker">
+                        <button id="light-closePickerBtn-error" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Btn disabled Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="light-openPickerBtn-disabled">
+                    DISABLED
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="light-popup-disabled" class="popup">
+                    <div id="light-disabled-picker">
+                        <button id="light-closePickerBtn-disabled" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="phone" id="light-main">
+            <h2 id="light-h2">Light mode</h2>
+            <div class="card" id="light-card">
+                <label class="card-content" id="light-card-content">Card Content</label>
+            </div>
+            <input type="text" placeholder="Text input" id="light-input" value="Some Text Values">
+            <div class="textVariant">
+                <label id="light-bold-text" class="bold-text">Bold Text</label>
+                <label id="light-regular-text" class="regular-text">Secondary color Text</label>
+            </div>
+            <div id="light-highlight" class="highlight"></div>
+            <div class="btn btn-base" id="light-btn">Button</div>
+            <div class="btn-dis btn-base" id="light-btn-dis">Button</div>
+            <div style="display: inline-flex; gap: 10px; font-size: small; background: darkgray; padding: 4px;">
+                <label id="light-invert">Invert Text</label>
+                <label id="light-err">Error Text</label>
+            </div>
+        </div>
+
+        <div class="phone" id="dark-main">
+            <h2 id="dark-h2">Dark mode</h2>
+            <div id="dark-card" class="card">
+                <label id="dark-card-content" class="card-content">Card Content</label>
+            </div>
+            <input type="text" placeholder="Text input" id="dark-input" value="Some Text Values">
+            <div class="textVariant">
+                <label id="dark-bold-text" class="bold-text">Bold Text</label>
+                <label id="dark-regular-text" class="regular-text">Secondary color Text</label>
+            </div>
+            <div id="dark-highlight" class="highlight"></div>
+            <div class="btn btn-base" id="dark-btn">Button</div>
+            <div class="btn-dis btn-base" id="dark-btn-dis">Button</div>
+            <div style="display: inline-flex; gap: 10px; font-size: small; background: lightgray; padding: 4px;">
+                <label id="dark-invert">Invert Text</label>
+                <label id="dark-err">Error Text</label>
+            </div>
+        </div>
+
+        <div class="controls">
+            <h3>Dark mode colors</h3>
+
+            <!-- Primary color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-background">
+                    BACKGROUND
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-background" class="popup">
+                    <div id="dark-background-picker">
+                        <button id="dark-closePickerBtn-background" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-surface">
+                    SURFACE
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-surface" class="popup">
+                    <div id="dark-surface-picker">
+                        <button id="dark-closePickerBtn-surface" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Content color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-textPrimary">
+                    TEXT_PRIMARY
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-textPrimary" class="popup">
+                    <div id="dark-textPrimary-picker">
+                        <button id="dark-closePickerBtn-textPrimary" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Input Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-textSecondary">
+                    TEXT_SECONDARY
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-textSecondary" class="popup">
+                    <div id="dark-textSecondary-picker">
+                        <button id="dark-closePickerBtn-textSecondary" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text Input Text color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-textInvert">
+                    TEXT_INVERT
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-textInvert" class="popup">
+                    <div id="dark-textInvert-picker">
+                        <button id="dark-closePickerBtn-textInvert" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-borderLight">
+                    BORDER_LIGHT
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-borderLight" class="popup">
+                    <div id="dark-borderLight-picker">
+                        <button id="dark-closePickerBtn-borderLight" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimmed color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-borderDark">
+                    BORDER_DARK
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-borderDark" class="popup">
+                    <div id="dark-borderDark-picker">
+                        <button id="dark-closePickerBtn-borderDark" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Btn Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-accent">
+                    ACCENT
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-accent" class="popup">
+                    <div id="dark-accent-picker">
+                        <button id="dark-closePickerBtn-accent" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Btn txt color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-error">
+                    ERROR
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-error" class="popup">
+                    <div id="dark-error-picker">
+                        <button id="dark-closePickerBtn-error" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Btn disabled Bg color picker -->
+            <div class="popup-container">
+                <label class="picker-label" id="dark-openPickerBtn-disabled">
+                    DISABLED
+                    <img src='./picker-icon.png' width="16" />
+                </label>
+                <div id="dark-popup-disabled" class="popup">
+                    <div id="dark-disabled-picker">
+                        <button id="dark-closePickerBtn-disabled" class="closePicker">x</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </dic>
+
+    <!-- Export Theme Button -->
+    <button id="exportTheme">Export Theme</button>
+
+    <script type="module" src="scripts/ui-elements.js"></script>
+    <script type="module" src="scripts/colors.js"></script>
+    <script type="module" src="scripts/picker.js"></script>
+    <script type="module" src="scripts/index.js"></script>
+    <script type="module" src="scripts/picker-elements.js"></script>
+</body>
+
+</html>
